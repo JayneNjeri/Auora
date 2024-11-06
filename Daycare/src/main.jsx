@@ -7,18 +7,25 @@ import {
 import App from './App.jsx'
 import Home from './Pages/Home.jsx'
 import About from './Pages/About.jsx'
-import Pricing from './Pages/Pricing.jsx'
+import Providers from './Pages/Providers.jsx';
 import Contact from './Pages/Contact.jsx'
+import SignIn from './Pages/Signin.jsx';
+import SignUp from './Pages/Signup.jsx';
+import ErrorPage from './ErrorPage.jsx';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
+    errorElement: <ErrorPage />,
     children: [
       { path: 'home', element: <Home /> },
       { path: 'about-us', element: <About /> },
-      { path: 'pricing', element: <Pricing /> },
+      { path: 'providers', element: <Providers /> },
       { path: 'contact-us', element: <Contact /> },
+      { path: 'sign-up', element: <SignUp /> },
+      { path: 'sign-in', element: <SignIn /> }
+      
     ],
   },
 ]);

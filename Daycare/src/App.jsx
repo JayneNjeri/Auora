@@ -7,13 +7,12 @@ function App() {
  
   return (
     <>
+       <Navbar />
+       
+       <Home />
     <nav className='content'>
       <Outlet />
     </nav>
-    <div>
-      <Navbar />
-       <Home />
-    </div>
   
   
    

@@ -8,6 +8,8 @@ export default {
     extend: {
       fontFamily:{
         roboto: ['Roboto', 'sans-serif'],
+        itim: ['Itim', 'cursive'],
+        caveat: ['Caveat', 'cursive'],
       },
     },
   },
