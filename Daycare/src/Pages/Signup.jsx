@@ -1,4 +1,4 @@
-const SignUp = () => {
+  const SignUp = () => {
     return (  
         <h1>welcome</h1>
     );

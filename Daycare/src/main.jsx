@@ -1,17 +1,17 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
 import {
   createBrowserRouter,
   RouterProvider,
 } from 'react-router-dom';
-import App from './App.jsx'
-import Home from './Pages/Home.jsx'
-import About from './Pages/About.jsx'
-import Providers from './Pages/Providers.jsx';
-import Contact from './Pages/Contact.jsx'
-import SignIn from './Pages/Signin.jsx';
-import SignUp from './Pages/Signup.jsx';
-import ErrorPage from './ErrorPage.jsx';
+import App from './App';
+import Home from './Pages/Home';
+import About from './Pages/About';
+import Providers from './Pages/Providers';
+import Contact from './Pages/Contact';
+import SignUp from './Pages/SignUp';
+import SignIn from './Pages/Signin';
+import ErrorPage from './ErrorPage';
 
 const router = createBrowserRouter([
   {
@@ -19,19 +19,18 @@ const router = createBrowserRouter([
     element: <App />,
     errorElement: <ErrorPage />,
     children: [
-      { path: 'home', element: <Home /> },
-      { path: 'about-us', element: <About /> },
+      { path: '/', element: <Home /> },
+      { path: 'about', element: <About /> },
       { path: 'providers', element: <Providers /> },
-      { path: 'contact-us', element: <Contact /> },
-      { path: 'sign-up', element: <SignUp /> },
-      { path: 'sign-in', element: <SignIn /> }
-      
+      { path: 'contact', element: <Contact /> },
+      { path: 'signup', element: <SignUp /> },
+      { path: 'signin', element: <SignIn /> },
     ],
   },
 ]);
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-      <RouterProvider router={router} />
-  </StrictMode>,
-)
+    <RouterProvider router={router} />
+  </StrictMode>
+);
